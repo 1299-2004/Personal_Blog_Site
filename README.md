@@ -19,5 +19,5 @@ This is a simple Flask-based personal blogging platform created during my Python
 
 ## 🙋‍♂️ Author
 **Shivyansh Rai**  
-[LinkedIn]((https://www.linkedin.com/in/shivyansh-rai-14a076258)).  
+[LinkedIn]([https://www.linkedin.com/in/shivyansh-rai-14a076258]).  
 [GitHub](https://github.com/1299-2004)
