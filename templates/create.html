@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Post</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f7f9fc;
+            --text-color: #2c3e50;
+            --card-bg: white;
+        }
+        .dark {
+            --bg-color: #1e1e2f;
+            --text-color: #f1f1f1;
+            --card-bg: #2d2d3a;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            color: #3498db;
+        }
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            padding: 6px 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌓 Toggle Theme</button>
+
+    <h1>➕ Create New Post</h1>
+    <form method="post">
+        <label>Title:</label>
+        <input type="text" name="title" required>
+
+        <label>Content:</label>
+        <textarea name="content" rows="6" required></textarea>
+
+        <input type="submit" value="Publish">
+    </form>
+
+    <a href="{{ url_for('index') }}">⬅️ Back to Blog</a>
+
+    <footer style="text-align: center; margin-top: 50px; font-size: 14px; color: gray;">
+        <hr>
+        <p>Developed by <strong>Shivyansh Rai</strong> 💻</p>
+        <p>Internship Project | Python + Flask | 2025</p>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+</body>
+</html>
